@@ -6,7 +6,7 @@ This App runs from the command line.  It prompts for a path location to a correc
 A correctly formed file being a :
 
 1. Tab delimited .txt file.
-2. The information in the order of bank, card number, expiry date.
+2. The information being in the order of bank, card number, expiry date.
 
 
 Upon reading this file the programme will then output to the command prompt :
