@@ -40,6 +40,9 @@ public class testSortCreditCardsByDescendingDateAndPrint {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
+     /*
+     *Adding and testing we sort cards in correct format correctly.
+     */
      @Test
      public void testDesc() {
      
@@ -54,6 +57,10 @@ public class testSortCreditCardsByDescendingDateAndPrint {
          
      }
      
+     /*
+     *Adding and testing we dont display cards numbers that we dont know how to 
+     *correctly mask.
+     */
       @Test
      public void testUnknownDetail(){
      
@@ -67,8 +74,11 @@ public class testSortCreditCardsByDescendingDateAndPrint {
          c.printOutput();
          
      }
-     
-           @Test
+     /*
+     *Adding and testing that we handle cards with bad dates.
+     *
+     */ 
+     @Test
      public void testbadDate(){
      
          CreditCardSorter c = new CreditCardSorter();
@@ -80,8 +90,11 @@ public class testSortCreditCardsByDescendingDateAndPrint {
          
          
      }
-     
-                @Test
+     /*
+     *Adding and testing that we can handle dates that are all lowercase.
+     *
+     */      
+     @Test
      public void testLowerCaseDate(){
      
          CreditCardSorter c = new CreditCardSorter();
@@ -94,7 +107,10 @@ public class testSortCreditCardsByDescendingDateAndPrint {
          c.printOutput();
          
      }
-     
+     /*
+     *Adding and testing that we can handle dates that are all uppercase.
+     *
+     */     
           public void testUpperCaseDate(){
      
          CreditCardSorter c = new CreditCardSorter();

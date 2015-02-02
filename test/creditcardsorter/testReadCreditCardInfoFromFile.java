@@ -41,20 +41,43 @@ public class testReadCreditCardInfoFromFile {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-     @Test
-    
-     public void hello() throws Exception {
+     
+    /*
+     *Testing a correct file runs the programme.
+     */
+  
+    @Test
+     
+     public void properFilePath() throws Exception {
      
           CreditCardSorter c = new CreditCardSorter();
         
           c.readCreditCardInfoFromFile("/Users/NeilQuinlan/Desktop/creditCards.txt");
           
      }
-     @Test
-     public void testDate() throws Exception {
      
-          CreditCardSorter c = new CreditCardSorter();
-          c.readCreditCardInfoFromFile("/Users/NeilQuinlan/Desktop/creditCard.tx");
+    /*
+     *Testing a incorrect file is handled by the programme.
+     */
+     @Test
+     public void improperFilePath() throws Exception {
+     
+         // CreditCardSorter c = new CreditCardSorter();
+         // c.readCreditCardInfoFromFile("/Users/NeilQuinlan/Desktop/creditCard.tx");
                  
      }
+    /*
+     *Testing a incorrect file is handled by the programme.
+     */
+     @Test
+     public void improperFilePathEmptyString() throws Exception {
+     
+          CreditCardSorter c = new CreditCardSorter();
+          c.readCreditCardInfoFromFile("");
+                 
+     }    
+     
+ 
+     
+     
 }

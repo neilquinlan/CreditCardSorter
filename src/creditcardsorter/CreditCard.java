@@ -11,7 +11,7 @@ import java.util.Date;
 import java.text.ParseException;
 
 /**
- *
+ * This class represents a CreditCard Object and implements the interface Card.
  * @author neilquinlan
  */
 public class CreditCard implements Card  {
@@ -20,21 +20,36 @@ public class CreditCard implements Card  {
     protected String encryptedNumber;
     private String dateAsString;
     private Date dateAsObject;
-    
+    /**
+     * This method takes in a variable that represents the bank that issued 
+     * the card and sets the issuingBank variable with it
+     * @param name the Name of the bank that issued the card
+     * 
+     */
     @Override
     public void setIssuingBank(String name)
     {
         issuingBank = name;
     }
-    
+     /**
+     * This method takes in a variable that represents the credit card number 
+     * and sets the cardNumber variable with it.
+     * @param cardNumber a String representing the card number
+     * 
+     */
     @Override
     public void setNumber(String cardNumber)
     {
         number = cardNumber;   
     }
-    
+    /**
+     * This method takes in a variable that represents the expiry date 
+     * and sets the dateAsString variable with it.
+     * @param cardDate a String representing the card expirydate
+     * 
+     */
     @Override
-    public void setDate(String cardDate)
+    public void setExpiryDate(String cardDate)
     {
         dateAsString = cardDate;
         SimpleDateFormat simpleDate = new SimpleDateFormat("MMMM-yyyy");

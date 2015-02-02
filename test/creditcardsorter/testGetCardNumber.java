@@ -40,6 +40,9 @@ public class testGetCardNumber {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
+    /*
+     *Testing cards beginning with 5601, first card in file.
+     */
      @Test
     public void card1() 
     {   
@@ -48,7 +51,9 @@ public class testGetCardNumber {
         assertEquals("56xx-xxxx-xxxx-xxxx",c.getEncryptedCardNumber());
         
     }
-    
+    /*
+     *Testing cards beginning with 4519, second card in file.
+     */
     @Test
     public void card2() 
     {   
@@ -57,6 +62,9 @@ public class testGetCardNumber {
         assertEquals("4519-xxxx-xxxx-xxxx",c.getEncryptedCardNumber());
         
     }
+    /*
+     *Testing cards beginning with 3786, third card in file.
+     */
     @Test
     public void card3() 
     {   
@@ -65,11 +73,26 @@ public class testGetCardNumber {
         assertEquals("xxxx-xxxx-xxxx-345",c.getEncryptedCardNumber());
         
     }
+    /*
+     *Testing cards that are of the incorrect form; overrun.
+     */
     @Test
     public void card4() 
     {   
         CreditCard c = new CreditCard();
         c.setNumber("2367-7334-8965-3453-34543");
+        System.out.println(c.getEncryptedCardNumber());
+        
+    }
+    
+    /*
+     *Testing cards that are of the incorrect form; underrun.
+     */
+    @Test
+    public void card5() 
+    {   
+        CreditCard c = new CreditCard();
+        c.setNumber("2367-7334");
         System.out.println(c.getEncryptedCardNumber());
         
     }

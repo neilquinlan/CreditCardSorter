@@ -45,7 +45,7 @@ public class testSetDate {
          
          CreditCardSorter c = new CreditCardSorter();
          Card card1 = new CreditCard();
-         card1.setDate("NOV-12");
+         card1.setExpiryDate("NOV-12");
          assertEquals("NOV-12",card1.getStringDate());
        }
      
@@ -54,7 +54,7 @@ public class testSetDate {
          
          CreditCardSorter c = new CreditCardSorter();
          Card card1 = new CreditCard();
-         card1.setDate("nov-12");
+         card1.setExpiryDate("nov-12");
          assertEquals("nov-12",card1.getStringDate());
        }
      @Test
@@ -62,7 +62,7 @@ public class testSetDate {
          
          CreditCardSorter c = new CreditCardSorter();
          Card card1 = new CreditCard();
-         card1.setDate("nov-12");
+         card1.setExpiryDate("nov-12");
          assertEquals("nov-12",card1.getStringDate());
        }
 }

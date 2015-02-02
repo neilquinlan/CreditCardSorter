@@ -50,6 +50,7 @@ public class CreditCardSorter   {
         public ArrayList<Card> readCreditCardInfoFromFile (String filePath ) 
         {
             BufferedReader reader;
+               
             try
             {
                 reader = new BufferedReader(new FileReader(filePath));
@@ -80,10 +81,15 @@ public class CreditCardSorter   {
             catch( IOException e)
             {
                 System.out.println("File can not be read");
-            }  
+            } 
+              catch( NullPointerException e)
+            {
+                System.out.println("File path is pointing to Null");
+            } 
             return myCards;
-                
-        }    
+            
+        }
+          
         /**
         *  This method prompts the user for a location of the file on disk. 
         *  
@@ -122,7 +128,7 @@ public class CreditCardSorter   {
             Card creditCard = new CreditCard();
             creditCard.setIssuingBank(issuingBank);
             creditCard.setNumber(cardNumber);
-            creditCard.setDate(cardDate);
+            creditCard.setExpiryDate(cardDate);
             myCards.add(creditCard);
         }        
                 
